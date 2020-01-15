@@ -1,0 +1,76 @@
+.Card {
+    width: 350px;
+    /*Largeur*/
+    margin: 0px auto;
+    /*Espace*/
+    background-color: white;
+    /*Couleur de fond*/
+    box-shadow: 0px 5px 20px #999;
+    /*Ombrage*/
+    background-image: url(image/Fond.jpg);
+    font-size: small;
+    background-size: cover;
+
+
+
+}
+
+.Titre {
+    font-size: large;
+    font-family: 'Unica One',
+        cursive;
+    line-height: 0.5;
+}
+
+.Card a {
+    /*5*/
+    color: #333;
+    text-decoration: none;
+}
+
+.Card:hover .photo img {
+    /*Effet si on survole la photo*/
+    width: 120%;
+    filter: grayscale(0);
+}
+
+.photo {
+    height: 150px;
+    /*On fixe la taille*/
+    position: relative;
+    /*position relative*/
+    overflow: hidden;
+    /*Tout ce qui dépasse de la fenêtre sera caché*/
+
+}
+
+.photo img {
+    width: 150px;
+    position: absolute;
+    top: 50%;
+    /* Position sur la fenêtre */
+    left: 50%;
+    /* Position sur la fenêtre */
+    transform: translate(-50%, -50%);
+    filter: grayscale(1);
+    /* Effet sur l'image avant que l'utilisateur passe dessus */
+    transition-property: filter width;
+    /* Effet en largeur */
+    transition-duration: .3s;
+    transition-timing-function: ease;
+    width: 100%;
+}
+
+.CardBody {
+    text-align: left;
+    /* On aligne le texte a gauche*/
+    margin-left: 7%;
+    padding: 15px 20px;
+    /*Permet de gérer l'espace*/
+    box-sizing: border-box;
+    /*Concerne le Padding, le contient dedans*/
+    width: 100%;
+    font-family: 'Advent Pro',
+        sans-serif;
+    /* Police d'écriture venant de Google Font */
+}
